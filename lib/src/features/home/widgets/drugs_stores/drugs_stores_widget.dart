@@ -12,7 +12,7 @@ class _DrugStoreWidgetState extends State<DrugStoreWidget> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: Center(
+      child: const Center(
         child: Text('Drug Stores'),
       ),
     );

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:lfood/src/features/home/widgets/all_stores/all_stores_widget.dart';
-import 'package:lfood/src/features/home/widgets/drink_store/drink_store_widget.dart';
-import 'package:lfood/src/features/home/widgets/drugs_stores/drugs_stores_widget.dart';
-import 'package:lfood/src/features/home/widgets/markets/markets_widget.dart';
-import 'package:lfood/src/features/home/widgets/pet_store/pet_store_widget.dart';
-import 'package:lfood/src/features/home/widgets/restaurants/restaurants_widget.dart';
-import 'package:pepperoni/pepperoni.dart';
+
+import '../../widgets/all_stores/all_stores_widget.dart';
+import '../../widgets/drink_store/drink_store_widget.dart';
+import '../../widgets/drugs_stores/drugs_stores_widget.dart';
+import '../../widgets/markets/markets_widget.dart';
+import '../../widgets/pet_store/pet_store_widget.dart';
+import '../../widgets/restaurants/restaurants_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,9 +14,14 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
-  late final tabController = TabController(length: 6, vsync: this);
+class _HomePageState extends State<HomePage> //
+    with
+        SingleTickerProviderStateMixin,
+        AutomaticKeepAliveClientMixin {
+  late final tabController = TabController(
+    length: 6,
+    vsync: this,
+  );
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -34,22 +36,22 @@ class _HomePageState extends State<HomePage>
             controller: tabController,
             tabs: const [
               Tab(
-                text: "Inicio",
+                text: 'Inicio',
               ),
               Tab(
-                text: "Restaurantes",
+                text: 'Restaurantes',
               ),
               Tab(
-                text: "Mercados",
+                text: 'Mercados',
               ),
               Tab(
-                text: "Bebidas",
+                text: 'Bebidas',
               ),
               Tab(
-                text: "Farmacias",
+                text: 'Farmacias',
               ),
               Tab(
-                text: "Pets",
+                text: 'Pets',
               ),
             ],
             isScrollable: true,
@@ -58,14 +60,17 @@ class _HomePageState extends State<HomePage>
             unselectedLabelColor: Colors.black54,
           ),
         ),
-        body: TabBarView(controller: tabController, children: [
-          AllStoresWidget(tabController: tabController),
-          const RestaurantsWidget(),
-          const MarketsWidget(),
-          const DrinkStoresWidget(),
-          const DrugStoreWidget(),
-          const PetStoresWidget()
-        ]),
+        body: TabBarView(
+          controller: tabController,
+          children: [
+            AllStoresWidget(tabController: tabController),
+            const RestaurantsWidget(),
+            const MarketsWidget(),
+            const DrinkStoresWidget(),
+            const DrugStoreWidget(),
+            const PetStoresWidget()
+          ],
+        ),
       ),
     );
   }

@@ -12,7 +12,7 @@ class _PetStoresWidgetState extends State<PetStoresWidget> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: Center(
+      child: const Center(
         child: Text('Pet Stores'),
       ),
     );

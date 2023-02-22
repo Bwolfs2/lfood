@@ -12,7 +12,7 @@ class CategoryListWidget extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8),
         child: Wrap(
           spacing: 5,
           runSpacing: 10,
@@ -57,7 +57,7 @@ class _CategoryItemWidget extends StatelessWidget {
                 child: AspectRatio(
                   aspectRatio: 9 / 8,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
                       child: ColoredBox(
@@ -73,7 +73,7 @@ class _CategoryItemWidget extends StatelessWidget {
               ),
               Text(
                 item.label,
-                style: TextStyle(fontSize: 12),
+                style: const TextStyle(fontSize: 12),
               )
             ],
           ),

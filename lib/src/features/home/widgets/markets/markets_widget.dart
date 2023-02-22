@@ -12,7 +12,7 @@ class _MarketsWidgetState extends State<MarketsWidget> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: Center(
+      child: const Center(
         child: Text('Markets'),
       ),
     );

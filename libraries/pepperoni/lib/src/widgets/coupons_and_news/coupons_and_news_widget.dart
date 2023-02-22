@@ -1,20 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CouponsAndNewsWidget extends StatefulWidget {
   final List<String> imageList;
-  const CouponsAndNewsWidget({Key? key, required this.imageList})
-      : super(key: key);
+  const CouponsAndNewsWidget({Key? key, required this.imageList}) : super(key: key);
 
   @override
   State<CouponsAndNewsWidget> createState() => _CouponsAndNewsWidgetState();
 }
 
 class _CouponsAndNewsWidgetState extends State<CouponsAndNewsWidget> {
-  late final pageController =
-      PageController(viewportFraction: .9, initialPage: 0);
+  late final pageController = PageController(viewportFraction: .9);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +24,7 @@ class _CouponsAndNewsWidgetState extends State<CouponsAndNewsWidget> {
             padEnds: false,
             itemBuilder: (context, index) {
               return Container(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: AspectRatio(
@@ -55,8 +50,7 @@ class _CouponsAndNewsWidgetState extends State<CouponsAndNewsWidget> {
                 return Padding(
                   padding: const EdgeInsets.all(2),
                   child: CircleAvatar(
-                    backgroundColor:
-                        isSelected ? Colors.black87 : Colors.black26,
+                    backgroundColor: isSelected ? Colors.black87 : Colors.black26,
                     radius: isSelected ? 3 : 2,
                   ),
                 );

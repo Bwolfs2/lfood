@@ -12,7 +12,7 @@ class _DrinkStoresWidgetState extends State<DrinkStoresWidget> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: Center(
+      child: const Center(
         child: Text('Drink Stores'),
       ),
     );
