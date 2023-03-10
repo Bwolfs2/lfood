@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lfood/src/features/home/view/pages/home_page.dart';
-import 'package:lfood/src/features/order/view/pages/order_page.dart';
-import 'package:lfood/src/features/profile/views/pages/profile_page.dart';
-import 'package:lfood/src/features/search/views/pages/search_page.dart';
 import 'package:pepperoni/pepperoni.dart';
+
+import '../../../home/view/pages/home_page.dart';
+import '../../../order/view/pages/order_page.dart';
+import '../../../profile/views/pages/profile_page.dart';
+import '../../../search/views/pages/search_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
