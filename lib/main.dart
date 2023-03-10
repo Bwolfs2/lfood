@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lfood/src/features/dashboard/views/pages/dashboard_page.dart';
 
-import 'src/features/home/view/pages/home_page.dart';
+import 'src/features/dashboard/views/pages/dashboard_page.dart';
 
 void main() {
   runApp(const LFoodApp());

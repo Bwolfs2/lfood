@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lfood/src/features/home/view/pages/home_page.dart';
+import 'package:lfood/src/features/order/view/pages/order_page.dart';
 import 'package:lfood/src/features/profile/views/pages/profile_page.dart';
 import 'package:lfood/src/features/search/views/pages/search_page.dart';
 import 'package:pepperoni/pepperoni.dart';
-import 'package:lfood/src/features/order/view/pages/order_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -29,12 +29,13 @@ class _DashboardPageState extends State<DashboardPage> {
         ],
       ),
       bottomNavigationBar: PepperoniBottomBar(
-        onIndexSelected: (index) => pageController.jumpToPage(index),
+        onIndexSelected: pageController.jumpToPage,
         items: [
           PepperoniBottomBarItem(
-              icon: Icons.home_outlined,
-              activeIcon: Icons.home_filled,
-              label: 'Início'),
+            icon: Icons.home_outlined,
+            activeIcon: Icons.home_filled,
+            label: 'Início',
+          ),
           PepperoniBottomBarItem(
             icon: Icons.search_outlined,
             activeIcon: Icons.search_off_sharp,

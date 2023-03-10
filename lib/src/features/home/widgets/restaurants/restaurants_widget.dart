@@ -12,7 +12,7 @@ class _RestaurantsWidgetState extends State<RestaurantsWidget> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: Center(
+      child: const Center(
         child: Text('Restaurants'),
       ),
     );
